@@ -2,6 +2,9 @@ server:
   port: 8081
 
 spring:
+  application:
+    name: springboot-tools-demo
+# h2数据库
   datasource:
     driverClassName: org.h2.Driver
     url: jdbc:h2:mem:dbtest
@@ -27,3 +30,10 @@ spring:
   banner:
     charset: UTF-8
     location: classpath:templates/banner.txt
+
+logging:
+  level:
+    root: debug
+  path: C:/data/logs/springboot-logback-demo
+
+debug: false
