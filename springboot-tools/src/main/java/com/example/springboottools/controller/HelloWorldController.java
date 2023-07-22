@@ -23,7 +23,7 @@ public class HelloWorldController {
         log.info("info log @ {}", LocalDateTime.now());
         log.warn("warn log @ {}", LocalDateTime.now());
         log.error("error log @ {}", LocalDateTime.now());
-        return new ResponseEntity<>("hello world", HttpStatus.OK);
+        return new ResponseEntity<>("hello world press Ctrl+F9 to trigger 热更新.", HttpStatus.OK);
     }
 
 
