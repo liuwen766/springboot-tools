@@ -17,4 +17,10 @@ public class HelloWorldController {
         return new ResponseEntity<>("hello world", HttpStatus.OK);
     }
 
+
+    @GetMapping("health")
+    public ResponseEntity<String> health(){
+        return new ResponseEntity<>("health check ok", HttpStatus.OK);
+    }
+
 }
