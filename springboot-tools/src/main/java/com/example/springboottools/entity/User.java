@@ -1,10 +1,18 @@
 package com.example.springboottools.entity;
 
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "tb_user")
 public class User {
 
     /**
      * user id
      */
+    @Id
     private int userId;
 
     /**

@@ -8,6 +8,7 @@ import java.util.List;
 
 @Repository
 public class UserRepository {
+
     private List<User> userDemoList = new ArrayList<>();
 
     public void save(User user) {
@@ -17,5 +18,5 @@ public class UserRepository {
     public List<User> findAll() {
         return userDemoList;
     }
-
 }
+
