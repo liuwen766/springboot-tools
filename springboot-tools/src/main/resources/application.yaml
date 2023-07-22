@@ -22,3 +22,8 @@ spring:
       platform: h2
       schema-locations: classpath:db/schema.sql
       data-locations: classpath:db/data.sql
+
+  #  自定义Banner
+  banner:
+    charset: UTF-8
+    location: classpath:templates/banner.txt
