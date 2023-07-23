@@ -29,7 +29,7 @@ public class HelloWorldController {
 
     @GetMapping("health")
     public ResponseEntity<String> health(){
-        return new ResponseEntity<>("health check ok", HttpStatus.OK);
+        return new ResponseEntity<>("health check ok!!", HttpStatus.OK);
     }
 
 }
