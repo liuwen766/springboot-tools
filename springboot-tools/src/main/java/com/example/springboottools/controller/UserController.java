@@ -2,6 +2,7 @@ package com.example.springboottools.controller;
 
 import com.example.springboottools.entity.User;
 import com.example.springboottools.service.UserService;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -33,6 +34,7 @@ public class UserController {
      *
      * @return user list
      */
+    @ApiOperation("用户列表")
     @GetMapping("list")
     public List<User> list() {
         return userService.list();

@@ -1,5 +1,6 @@
 package com.example.springboottools.controller;
 
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,6 +17,7 @@ public class HelloWorldController {
      *
      * @return hello
      */
+    @ApiOperation("hello world 接口")
     @GetMapping("/hello")
     public ResponseEntity<String> hello() {
         log.trace("trace log @ {}", LocalDateTime.now());
@@ -27,6 +29,7 @@ public class HelloWorldController {
     }
 
 
+    @ApiOperation("health健康检查")
     @GetMapping("health")
     public ResponseEntity<String> health(){
         return new ResponseEntity<>("health check ok!!", HttpStatus.OK);
