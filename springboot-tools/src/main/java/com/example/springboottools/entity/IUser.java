@@ -64,9 +64,9 @@ public class IUser implements BaseEntity {
     /**
      * join to role table.
      */
-//    @ManyToMany(cascade = {CascadeType.REFRESH}, fetch = FetchType.EAGER)
-//    @JoinTable(name = "tb_user_role", joinColumns = {
-//            @JoinColumn(name = "user_id")}, inverseJoinColumns = {@JoinColumn(name = "role_id")})
-//    private Set<Role> roles;
+    @ManyToMany(cascade = {CascadeType.REFRESH}, fetch = FetchType.EAGER)
+    @JoinTable(name = "tb_user_role", joinColumns = {
+            @JoinColumn(name = "user_id")}, inverseJoinColumns = {@JoinColumn(name = "role_id")})
+    private Set<Role> roles;
 
 }

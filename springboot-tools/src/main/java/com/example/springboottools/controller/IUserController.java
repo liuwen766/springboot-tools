@@ -32,11 +32,6 @@ public class IUserController {
         if (user.getId() == null || !userService.exists(user.getId())) {
             user.setCreateTime(LocalDateTime.now());
             user.setUpdateTime(LocalDateTime.now());
-            Set<Role> roles = new HashSet<>(1);
-            Role role = new Role();
-            role.setId(1L);
-            roles.add(role);
-//            user.setRoles(roles);
             userService.save(user);
         } else {
             user.setUpdateTime(LocalDateTime.now());
@@ -50,7 +45,7 @@ public class IUserController {
      * @return user list
      */
     @ApiOperation("Query User One")
-    @GetMapping("edit/{userId}")
+    @GetMapping("get/{userId}")
     public ResponseResult<IUser> edit(@PathVariable("userId") Long userId) {
         return ResponseResult.success(userService.find(userId));
     }
