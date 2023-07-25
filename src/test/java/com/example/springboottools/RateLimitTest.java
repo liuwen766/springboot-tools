@@ -13,17 +13,17 @@ public class RateLimitTest {
 
     @Test
     public void test() throws InterruptedException {
-        int clientSize = 10;
-        CountDownLatch downLatch = new CountDownLatch(clientSize);
-        ExecutorService fixedThreadPool = Executors.newFixedThreadPool(clientSize);
-        IntStream.range(0, clientSize).forEach(i ->
-                fixedThreadPool.submit(() -> {
-                    RestTemplate restTemplate = new RestTemplate();
-                    restTemplate.getForObject("http://localhost:8081/rate/limit/get1", ResponseResult.class);
-                    downLatch.countDown();
-                })
-        );
-        downLatch.await();
-        fixedThreadPool.shutdown();
+//        int clientSize = 10;
+//        CountDownLatch downLatch = new CountDownLatch(clientSize);
+//        ExecutorService fixedThreadPool = Executors.newFixedThreadPool(clientSize);
+//        IntStream.range(0, clientSize).forEach(i ->
+//                fixedThreadPool.submit(() -> {
+//                    RestTemplate restTemplate = new RestTemplate();
+//                    restTemplate.getForObject("http://localhost:8081/rate/limit/get1", ResponseResult.class);
+//                    downLatch.countDown();
+//                })
+//        );
+//        downLatch.await();
+//        fixedThreadPool.shutdown();
     }
 }

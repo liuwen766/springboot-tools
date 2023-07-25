@@ -172,11 +172,54 @@
     </dependencies>
 
     <build>
+
+        <!-- 固定的jar的名字，这样Dockerfile可以固定写 -->
+        <finalName>springboot-demo-tools</finalName>
+
         <plugins>
+            <!-- springboot构建jar -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+
+            <!-- 构建docker镜像【需要本地有docker镜像环境】-->
+<!--            <plugin>-->
+<!--                <groupId>com.spotify</groupId>-->
+<!--                <artifactId>docker-maven-plugin</artifactId>-->
+<!--                <version>1.2.2</version>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <id>build-image</id>-->
+<!--                        <phase>package</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>build</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--                <configuration>-->
+<!--                    &lt;!&ndash; image 的名字 &ndash;&gt;-->
+<!--                    <imageName>${project.build.finalName}</imageName>-->
+<!--                    &lt;!&ndash; image 的tag, 可以是多个 &ndash;&gt;-->
+<!--                    <imageTags>-->
+<!--                        <imageTag>latest</imageTag>-->
+<!--                        <imageTag>${project.version}</imageTag>-->
+<!--                    </imageTags>-->
+<!--                    &lt;!&ndash; Dockerfile所在的目录 &ndash;&gt;-->
+<!--                    <dockerDirectory>${project.basedir}</dockerDirectory>-->
+<!--                    &lt;!&ndash; 复制jar到docker的位置 &ndash;&gt;-->
+<!--                    <resources>-->
+<!--                        <resource>-->
+<!--                            <targetPath>/</targetPath>-->
+<!--                            &lt;!&ndash;jar 包所在的路径，对应target目录&ndash;&gt;-->
+<!--                            <directory>${project.build.directory}</directory>-->
+<!--                            &lt;!&ndash; 包含的jar　&ndash;&gt;-->
+<!--                            <include>${project.build.finalName}.jar</include>-->
+<!--                        </resource>-->
+<!--                    </resources>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
+
         </plugins>
     </build>
 
