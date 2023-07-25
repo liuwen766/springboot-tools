@@ -24,4 +24,4 @@ build:
 	docker build --build-arg version=$(VERSION) -t $(IMAGE_NAME):$(IMAGE_VERSION) -f ./Dockerfile .
 
 # 启动容器镜像
-# docker run -d -p 8080:8081 --name my-springboot  my-image/springboot-tools:v1
+# docker run -d -p 8081:8081 --name my-springboot  my-image/springboot-tools:v1
