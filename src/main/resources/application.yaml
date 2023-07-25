@@ -10,7 +10,7 @@ spring:
       client:
         url: 'http://localhost:8081'
   datasource:
-    url: jdbc:mysql://192.168.168.131:3306/test_db?useSSL=false&autoReconnect=true&characterEncoding=utf8
+    url: jdbc:mysql://localhost:3306/test_db?useSSL=false&autoReconnect=true&characterEncoding=utf8
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: 123456
@@ -43,7 +43,7 @@ spring:
       stat-view-servlet:
         enabled: true
         # 访问监控页面 白名单，默认127.0.0.1
-        allow: 192.168.168.131
+        allow: 127.0.0.1
         login-username: admin
         login-password: admin
       # FilterStat
@@ -69,7 +69,7 @@ spring:
 
   redis:
     database: 0
-    host: 192.168.168.131
+    host: 127.0.0.1
     port: 6379
     #    password: test
     jedis:
@@ -79,6 +79,17 @@ spring:
         max-idle: 8
         max-wait: -1ms
     connect-timeout: 30000ms
+
+  data:
+    mongodb:
+      host: 127.0.0.1 #指定MongoDB服务地址
+      port: 27017 #指定端口，默认就为27017
+      database: article #指定使用的数据库(集合)
+      authentication-database: admin # 登录认证的逻辑库名
+#      username: admin #用户名
+#      password: abc123456 #密码
+
+
   # h2数据库
   #  datasource:
   #    driverClassName: org.h2.Driver
