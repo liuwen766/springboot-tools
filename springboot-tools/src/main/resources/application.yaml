@@ -61,27 +61,40 @@ spring:
         dialect: org.hibernate.dialect.MySQLDialect
         format_sql: true
         use-new-id-generator-mappings: false
-# h2数据库
-#  datasource:
-#    driverClassName: org.h2.Driver
-#    url: jdbc:h2:mem:dbtest
-#    username: sa
-#    password: sa
-#  h2:
-#    console:
-#      enabled: true
-#      path: /h2
-#      settings:
-#        web-allow-others: true
-#  jpa:
-#    hibernate:
-#      ddl-auto: update
-#    show-sql: true
-#  sql:
-#    init:
-#      platform: h2
-#      schema-locations: classpath:db/schema.sql
-#      data-locations: classpath:db/data.sql
+
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+    #    password: test
+    jedis:
+      pool:
+        min-idle: 0
+        max-active: 8
+        max-idle: 8
+        max-wait: -1ms
+    connect-timeout: 30000ms
+  # h2数据库
+  #  datasource:
+  #    driverClassName: org.h2.Driver
+  #    url: jdbc:h2:mem:dbtest
+  #    username: sa
+  #    password: sa
+  #  h2:
+  #    console:
+  #      enabled: true
+  #      path: /h2
+  #      settings:
+  #        web-allow-others: true
+  #  jpa:
+  #    hibernate:
+  #      ddl-auto: update
+  #    show-sql: true
+  #  sql:
+  #    init:
+  #      platform: h2
+  #      schema-locations: classpath:db/schema.sql
+  #      data-locations: classpath:db/data.sql
 
   #  自定义Banner
   banner:
@@ -103,7 +116,7 @@ knife4j:
 
 logging:
   level:
-#  只打印info级别的日志
+    #  只打印info级别的日志
     root: info
   file:
     path: C:/data/logs/springboot-logback-demo
