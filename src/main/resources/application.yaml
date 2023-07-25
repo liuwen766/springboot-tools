@@ -4,6 +4,11 @@ server:
 spring:
   application:
     name: springboot-tools-demo
+#   访问admin：http://localhost:8081/wallboard
+  boot:
+    admin:
+      client:
+        url: 'http://localhost:8081'
   datasource:
     url: jdbc:mysql://localhost:3306/test_db?useSSL=false&autoReconnect=true&characterEncoding=utf8
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -119,18 +124,20 @@ logging:
     #  只打印info级别的日志
     root: info
   file:
-    path: C:/data/logs/springboot-logback-demo
+    path: D:/data/logs/springboot-logback-demo
+  pattern:
+    file: '%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(%5p) %clr(${PID}){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n%wEx'
 
 debug: false
 
 
 management:
   endpoints:
-    enabled-by-default: false
+    enabled-by-default: true
     web:
       base-path: /manage
       exposure:
-        include: 'info,health,env,beans'
+        include: 'info,health,env,beans,*'
   # 也可以通过代码配置自定义更多的endpoint
   endpoint:
     info:
