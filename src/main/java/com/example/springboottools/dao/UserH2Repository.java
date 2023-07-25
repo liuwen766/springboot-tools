@@ -1,6 +1,6 @@
 package com.example.springboottools.dao;
 
-import com.example.springboottools.entity.User;
+import com.example.springboottools.entity.h2.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

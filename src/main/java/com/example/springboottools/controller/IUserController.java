@@ -1,7 +1,6 @@
 package com.example.springboottools.controller;
 
-import com.example.springboottools.entity.IUser;
-import com.example.springboottools.entity.Role;
+import com.example.springboottools.entity.mysql.IUser;
 import com.example.springboottools.entity.query.UserQueryBean;
 import com.example.springboottools.service.IUserService;
 import com.example.springboottools.util.ResponseResult;
@@ -12,8 +11,6 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
-import java.util.HashSet;
-import java.util.Set;
 
 @RestController
 @RequestMapping("/user/v2")

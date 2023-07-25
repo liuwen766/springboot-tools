@@ -1,6 +1,6 @@
 package com.example.springboottools.controller;
 
-import com.example.springboottools.entity.User;
+import com.example.springboottools.entity.h2.User;
 import com.taptap.ratelimiter.annotation.RateLimit;
 import com.taptap.ratelimiter.annotation.RateLimitKey;
 import org.springframework.web.bind.annotation.GetMapping;

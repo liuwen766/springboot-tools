@@ -1,6 +1,6 @@
 package com.example.springboottools.controller;
 
-import com.example.springboottools.entity.User;
+import com.example.springboottools.entity.h2.User;
 import com.example.springboottools.service.UserService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;

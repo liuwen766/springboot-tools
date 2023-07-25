@@ -1,6 +1,6 @@
 package com.example.springboottools.service;
 
-import com.example.springboottools.entity.IUser;
+import com.example.springboottools.entity.mysql.IUser;
 import com.example.springboottools.entity.query.UserQueryBean;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

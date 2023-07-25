@@ -21,7 +21,7 @@ public class UserParamController {
 
     /**
      * http://localhost:8080/user/v3/add .
-     *
+     *  jsr303参数校验
      * @param userParam user param
      * @return user
      */

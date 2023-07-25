@@ -1,6 +1,6 @@
 package com.example.springboottools.service;
 
-import com.example.springboottools.entity.User;
+import com.example.springboottools.entity.h2.User;
 
 import java.util.List;
 

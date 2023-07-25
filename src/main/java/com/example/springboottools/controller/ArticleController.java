@@ -1,6 +1,6 @@
 package com.example.springboottools.controller;
 
-import com.example.springboottools.entity.Article;
+import com.example.springboottools.entity.mongo.Article;
 import com.example.springboottools.service.ArticleService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

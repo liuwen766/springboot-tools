@@ -2,7 +2,7 @@ package com.example.springboottools.service.impl;
 
 import com.example.springboottools.dao.IBaseDao;
 import com.example.springboottools.dao.IRoleDao;
-import com.example.springboottools.entity.Role;
+import com.example.springboottools.entity.mysql.Role;
 import com.example.springboottools.entity.query.RoleQueryBean;
 import com.example.springboottools.service.IRoleService;
 import com.github.wenhao.jpa.Specifications;

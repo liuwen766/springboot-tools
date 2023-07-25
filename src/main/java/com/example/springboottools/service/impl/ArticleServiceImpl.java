@@ -1,7 +1,7 @@
 package com.example.springboottools.service.impl;
 
 import com.example.springboottools.dao.ArticleRepository;
-import com.example.springboottools.entity.Article;
+import com.example.springboottools.entity.mongo.Article;
 import com.example.springboottools.service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

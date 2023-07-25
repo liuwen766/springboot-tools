@@ -1,6 +1,6 @@
 package com.example.springboottools.dao;
 
-import com.example.springboottools.entity.Role;
+import com.example.springboottools.entity.mysql.Role;
 import org.springframework.stereotype.Repository;
 
 

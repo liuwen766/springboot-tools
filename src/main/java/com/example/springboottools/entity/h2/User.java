@@ -1,4 +1,4 @@
-package com.example.springboottools.entity;
+package com.example.springboottools.entity.h2;
 
 
 import lombok.Getter;

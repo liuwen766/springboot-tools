@@ -89,6 +89,9 @@ spring:
 #      username: admin #用户名
 #      password: abc123456 #密码
 
+    elasticsearch:
+      cluster-name: "elasticsearch"
+      cluster-nodes: 127.0.0.1:9300
 
   # h2数据库
   #  datasource:

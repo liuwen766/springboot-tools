@@ -1,6 +1,6 @@
 package com.example.springboottools.dao;
 
-import com.example.springboottools.entity.IUser;
+import com.example.springboottools.entity.mysql.IUser;
 import org.springframework.stereotype.Repository;
 
 

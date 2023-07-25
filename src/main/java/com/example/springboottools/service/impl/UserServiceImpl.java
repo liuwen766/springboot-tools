@@ -1,8 +1,7 @@
 package com.example.springboottools.service.impl;
 
 import com.example.springboottools.dao.UserH2Repository;
-import com.example.springboottools.dao.UserRepository;
-import com.example.springboottools.entity.User;
+import com.example.springboottools.entity.h2.User;
 import com.example.springboottools.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

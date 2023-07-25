@@ -1,5 +1,6 @@
-package com.example.springboottools.entity;
+package com.example.springboottools.entity.mysql;
 
+import com.example.springboottools.entity.BaseEntity;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;

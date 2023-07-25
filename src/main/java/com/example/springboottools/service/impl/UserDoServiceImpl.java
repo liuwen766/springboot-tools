@@ -3,7 +3,7 @@ package com.example.springboottools.service.impl;
 
 import com.example.springboottools.dao.IBaseDao;
 import com.example.springboottools.dao.IUserDao;
-import com.example.springboottools.entity.IUser;
+import com.example.springboottools.entity.mysql.IUser;
 import com.example.springboottools.entity.query.UserQueryBean;
 import com.example.springboottools.service.IUserService;
 import com.github.wenhao.jpa.Specifications;

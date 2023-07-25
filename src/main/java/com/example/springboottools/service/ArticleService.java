@@ -1,6 +1,6 @@
 package com.example.springboottools.service;
 
-import com.example.springboottools.entity.Article;
+import com.example.springboottools.entity.mongo.Article;
 
 import java.util.List;
 

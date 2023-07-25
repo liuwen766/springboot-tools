@@ -1,6 +1,6 @@
 package com.example.springboottools.dao;
 
-import com.example.springboottools.entity.Article;
+import com.example.springboottools.entity.mongo.Article;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 import java.util.List;

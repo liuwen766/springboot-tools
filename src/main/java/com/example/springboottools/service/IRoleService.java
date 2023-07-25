@@ -1,6 +1,6 @@
 package com.example.springboottools.service;
 
-import com.example.springboottools.entity.Role;
+import com.example.springboottools.entity.mysql.Role;
 import com.example.springboottools.entity.query.RoleQueryBean;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

@@ -1,4 +1,4 @@
-package com.example.springboottools.entity;
+package com.example.springboottools.entity.redis;
 
 import lombok.Getter;
 import lombok.Setter;

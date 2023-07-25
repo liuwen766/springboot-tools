@@ -1,7 +1,6 @@
 package com.example.springboottools.controller;
 
-import com.example.springboottools.entity.User;
-import com.example.springboottools.entity.UserRedis;
+import com.example.springboottools.entity.redis.UserRedis;
 import com.example.springboottools.service.IRedisService;
 import com.example.springboottools.util.ResponseResult;
 import io.swagger.annotations.ApiOperation;

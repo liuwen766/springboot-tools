@@ -90,6 +90,21 @@
             <version>5.7.0</version>
         </dependency>
 
+        <!--  spring-boot-starter-test 测试框架-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>2.0.32</version>
+        </dependency>
+
+
+
         <!-- 引入h2 -->
         <!--        <dependency>-->
         <!--            <groupId>com.h2database</groupId>-->
@@ -174,6 +189,11 @@
             <artifactId>spring-boot-starter-data-mongodb</artifactId>
         </dependency>
 
+        <!-- 引入ElasticSearch依赖 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
+        </dependency>
 
 
     </dependencies>
@@ -191,41 +211,41 @@
             </plugin>
 
             <!-- 构建docker镜像【需要本地有docker镜像环境】-->
-<!--            <plugin>-->
-<!--                <groupId>com.spotify</groupId>-->
-<!--                <artifactId>docker-maven-plugin</artifactId>-->
-<!--                <version>1.2.2</version>-->
-<!--                <executions>-->
-<!--                    <execution>-->
-<!--                        <id>build-image</id>-->
-<!--                        <phase>package</phase>-->
-<!--                        <goals>-->
-<!--                            <goal>build</goal>-->
-<!--                        </goals>-->
-<!--                    </execution>-->
-<!--                </executions>-->
-<!--                <configuration>-->
-<!--                    &lt;!&ndash; image 的名字 &ndash;&gt;-->
-<!--                    <imageName>${project.build.finalName}</imageName>-->
-<!--                    &lt;!&ndash; image 的tag, 可以是多个 &ndash;&gt;-->
-<!--                    <imageTags>-->
-<!--                        <imageTag>latest</imageTag>-->
-<!--                        <imageTag>${project.version}</imageTag>-->
-<!--                    </imageTags>-->
-<!--                    &lt;!&ndash; Dockerfile所在的目录 &ndash;&gt;-->
-<!--                    <dockerDirectory>${project.basedir}</dockerDirectory>-->
-<!--                    &lt;!&ndash; 复制jar到docker的位置 &ndash;&gt;-->
-<!--                    <resources>-->
-<!--                        <resource>-->
-<!--                            <targetPath>/</targetPath>-->
-<!--                            &lt;!&ndash;jar 包所在的路径，对应target目录&ndash;&gt;-->
-<!--                            <directory>${project.build.directory}</directory>-->
-<!--                            &lt;!&ndash; 包含的jar　&ndash;&gt;-->
-<!--                            <include>${project.build.finalName}.jar</include>-->
-<!--                        </resource>-->
-<!--                    </resources>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
+            <!--            <plugin>-->
+            <!--                <groupId>com.spotify</groupId>-->
+            <!--                <artifactId>docker-maven-plugin</artifactId>-->
+            <!--                <version>1.2.2</version>-->
+            <!--                <executions>-->
+            <!--                    <execution>-->
+            <!--                        <id>build-image</id>-->
+            <!--                        <phase>package</phase>-->
+            <!--                        <goals>-->
+            <!--                            <goal>build</goal>-->
+            <!--                        </goals>-->
+            <!--                    </execution>-->
+            <!--                </executions>-->
+            <!--                <configuration>-->
+            <!--                    &lt;!&ndash; image 的名字 &ndash;&gt;-->
+            <!--                    <imageName>${project.build.finalName}</imageName>-->
+            <!--                    &lt;!&ndash; image 的tag, 可以是多个 &ndash;&gt;-->
+            <!--                    <imageTags>-->
+            <!--                        <imageTag>latest</imageTag>-->
+            <!--                        <imageTag>${project.version}</imageTag>-->
+            <!--                    </imageTags>-->
+            <!--                    &lt;!&ndash; Dockerfile所在的目录 &ndash;&gt;-->
+            <!--                    <dockerDirectory>${project.basedir}</dockerDirectory>-->
+            <!--                    &lt;!&ndash; 复制jar到docker的位置 &ndash;&gt;-->
+            <!--                    <resources>-->
+            <!--                        <resource>-->
+            <!--                            <targetPath>/</targetPath>-->
+            <!--                            &lt;!&ndash;jar 包所在的路径，对应target目录&ndash;&gt;-->
+            <!--                            <directory>${project.build.directory}</directory>-->
+            <!--                            &lt;!&ndash; 包含的jar　&ndash;&gt;-->
+            <!--                            <include>${project.build.finalName}.jar</include>-->
+            <!--                        </resource>-->
+            <!--                    </resources>-->
+            <!--                </configuration>-->
+            <!--            </plugin>-->
 
         </plugins>
     </build>

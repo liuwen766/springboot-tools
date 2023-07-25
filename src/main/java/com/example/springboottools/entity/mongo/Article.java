@@ -1,4 +1,4 @@
-package com.example.springboottools.entity;
+package com.example.springboottools.entity.mongo;
 
 import lombok.Data;
 import lombok.experimental.Accessors;
