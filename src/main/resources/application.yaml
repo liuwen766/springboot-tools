@@ -122,3 +122,22 @@ logging:
     path: C:/data/logs/springboot-logback-demo
 
 debug: false
+
+
+management:
+  endpoints:
+    enabled-by-default: false
+    web:
+      base-path: /manage
+      exposure:
+        include: 'info,health,env,beans'
+  # 也可以通过代码配置自定义更多的endpoint
+  endpoint:
+    info:
+      enabled: true
+    health:
+      enabled: true
+    env:
+      enabled: true
+    beans:
+      enabled: true

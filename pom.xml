@@ -150,6 +150,12 @@
             <version>2.11.1</version>
         </dependency>
 
+        <!-- 引入actuator监控组件 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
 
     </dependencies>
 
